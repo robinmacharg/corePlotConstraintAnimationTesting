@@ -12,8 +12,6 @@
 		007804D01AE4F480001C0553 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007804CE1AE4F480001C0553 /* Main.storyboard */; };
 		007804D21AE4F480001C0553 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 007804D11AE4F480001C0553 /* Images.xcassets */; };
 		007804D51AE4F480001C0553 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 007804D31AE4F480001C0553 /* LaunchScreen.xib */; };
-		007804FB1AE51A6B001C0553 /* FrameUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 007804F61AE51A6B001C0553 /* FrameUtils.m */; };
-		007804FD1AE51A6B001C0553 /* UIView+FrameUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 007804F91AE51A6B001C0553 /* UIView+FrameUtils.m */; };
 		D21B2087E31960E84C6074B8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFF46CBEEF61B158A216483 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -26,10 +24,6 @@
 		007804D11AE4F480001C0553 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		007804D41AE4F480001C0553 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		007804F21AE51303001C0553 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		007804F51AE51A6B001C0553 /* FrameUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameUtils.h; sourceTree = "<group>"; };
-		007804F61AE51A6B001C0553 /* FrameUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameUtils.m; sourceTree = "<group>"; };
-		007804F81AE51A6B001C0553 /* UIView+FrameUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameUtils.h"; sourceTree = "<group>"; };
-		007804F91AE51A6B001C0553 /* UIView+FrameUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameUtils.m"; sourceTree = "<group>"; };
 		171CE637D1C2531834FD082F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1951D0D191672ACD813A59DF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2AFF46CBEEF61B158A216483 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,20 +85,8 @@
 		007804F31AE51A5E001C0553 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				007804F41AE51A6B001C0553 /* FrameUtils */,
 			);
 			name = ThirdParty;
-			sourceTree = "<group>";
-		};
-		007804F41AE51A6B001C0553 /* FrameUtils */ = {
-			isa = PBXGroup;
-			children = (
-				007804F51AE51A6B001C0553 /* FrameUtils.h */,
-				007804F61AE51A6B001C0553 /* FrameUtils.m */,
-				007804F81AE51A6B001C0553 /* UIView+FrameUtils.h */,
-				007804F91AE51A6B001C0553 /* UIView+FrameUtils.m */,
-			);
-			path = FrameUtils;
 			sourceTree = "<group>";
 		};
 		AE43BEBE881B68BBB893150A /* Pods */ = {
@@ -231,8 +213,6 @@
 			files = (
 				003078021AE8F114007222F4 /* ShrinkingViewController.swift in Sources */,
 				007804CB1AE4F480001C0553 /* AppDelegate.swift in Sources */,
-				007804FB1AE51A6B001C0553 /* FrameUtils.m in Sources */,
-				007804FD1AE51A6B001C0553 /* UIView+FrameUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
