@@ -1,25 +1,102 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zsB-rY-6Uo">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Shrinking View Controller-->
+        <scene sceneID="oVJ-dk-Mry">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zsB-rY-6Uo" customClass="ShrinkingViewController" customModule="expandingTableViewCells" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="rCe-02-kxU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pt4-kT-gxx"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="McC-KU-tfc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNd-od-VQo" userLabel="Container">
+                                <rect key="frame" x="0.0" y="100" width="600" height="300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lc6-Uw-Y0G" customClass="CPTGraphHostingView">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ERt-07-q3h"/>
+                                    <constraint firstItem="Lc6-Uw-Y0G" firstAttribute="top" secondItem="eNd-od-VQo" secondAttribute="top" id="Hfk-aQ-9lB"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lc6-Uw-Y0G" secondAttribute="trailing" id="bJQ-6z-MWt"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lc6-Uw-Y0G" secondAttribute="bottom" id="iS8-61-LfL"/>
+                                    <constraint firstItem="Lc6-Uw-Y0G" firstAttribute="leading" secondItem="eNd-od-VQo" secondAttribute="leading" id="lLJ-qr-C9e"/>
+                                </constraints>
+                            </view>
+                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nB7-sV-fqC" userLabel="Shrinkable View">
+                                <rect key="frame" x="0.0" y="400" width="600" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfZ-Dm-U82">
+                                        <rect key="frame" x="8" y="8" width="63" height="30"/>
+                                        <state key="normal" title="Grow Me">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doGrow:" destination="zsB-rY-6Uo" eventType="touchUpInside" id="gLu-bW-VFA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GzP-Gb-M8l">
+                                        <rect key="frame" x="522" y="8" width="70" height="30"/>
+                                        <state key="normal" title="Shrink Me">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doShrink:" destination="zsB-rY-6Uo" eventType="touchUpInside" id="NIq-Gv-6Ox"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="GzP-Gb-M8l" secondAttribute="trailing" constant="8" id="Jdg-8o-Nni"/>
+                                    <constraint firstItem="GzP-Gb-M8l" firstAttribute="top" secondItem="nB7-sV-fqC" secondAttribute="top" constant="8" id="Mww-VZ-djf"/>
+                                    <constraint firstItem="dfZ-Dm-U82" firstAttribute="top" secondItem="nB7-sV-fqC" secondAttribute="top" constant="8" id="YPa-Kd-8Nh"/>
+                                    <constraint firstItem="dfZ-Dm-U82" firstAttribute="leading" secondItem="nB7-sV-fqC" secondAttribute="leading" constant="8" id="eSP-ZE-qSz"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbS-dk-Ly4" userLabel="Top">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="88P-AT-NmE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eNd-od-VQo" firstAttribute="top" secondItem="vbS-dk-Ly4" secondAttribute="bottom" id="9fz-tb-R10"/>
+                            <constraint firstItem="vbS-dk-Ly4" firstAttribute="leading" secondItem="McC-KU-tfc" secondAttribute="leading" id="Cp3-me-pZu"/>
+                            <constraint firstItem="vbS-dk-Ly4" firstAttribute="top" secondItem="McC-KU-tfc" secondAttribute="top" id="M6p-oe-ViL"/>
+                            <constraint firstItem="nB7-sV-fqC" firstAttribute="top" secondItem="eNd-od-VQo" secondAttribute="bottom" id="MmU-rd-v3e"/>
+                            <constraint firstItem="eNd-od-VQo" firstAttribute="leading" secondItem="McC-KU-tfc" secondAttribute="leading" id="Ph3-zp-ZJ4"/>
+                            <constraint firstAttribute="trailing" secondItem="nB7-sV-fqC" secondAttribute="trailing" id="Qtp-lO-zU7"/>
+                            <constraint firstItem="nB7-sV-fqC" firstAttribute="leading" secondItem="McC-KU-tfc" secondAttribute="leading" id="vse-R5-VLv"/>
+                            <constraint firstItem="Pt4-kT-gxx" firstAttribute="top" secondItem="nB7-sV-fqC" secondAttribute="bottom" id="xFC-J1-Go9"/>
+                            <constraint firstAttribute="trailing" secondItem="eNd-od-VQo" secondAttribute="trailing" id="xZW-2Q-8VD"/>
+                            <constraint firstAttribute="trailing" secondItem="vbS-dk-Ly4" secondAttribute="trailing" id="zbv-qJ-ezp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="eNd-od-VQo" id="EM3-Qx-GeC"/>
+                        <outlet property="graphHostingView" destination="Lc6-Uw-Y0G" id="feR-cJ-AVc"/>
+                        <outlet property="growMeButton" destination="dfZ-Dm-U82" id="Ht5-jL-iWa"/>
+                        <outlet property="shrinkMeButton" destination="GzP-Gb-M8l" id="g4y-op-PHN"/>
+                        <outlet property="shrinkableView" destination="nB7-sV-fqC" id="6l4-hg-RQC"/>
+                        <outlet property="shrinkableViewHeightConstraint" destination="ERt-07-q3h" id="vLM-X9-ppx"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJ9-Sd-TAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="260" y="1150"/>
         </scene>
     </scenes>
 </document>
